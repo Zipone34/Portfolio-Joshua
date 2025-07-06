@@ -30,7 +30,7 @@ body.dark-mode #navbar {
     color: white;
 }
 
-/* Navbar styling */
+/* Navbar styling  and Home page Area*/
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -77,9 +77,10 @@ body.dark-mode #navbar {
 }
 
 /* ZP Picture */
-img {
+.zp {
     width: 50px;
-
+    height: 50px;
+    overflow: hidden;
 }
 
 /*Main*/
@@ -93,18 +94,60 @@ img {
 .young-image {
     width: 100%;
     filter: drop-shadow(4px 4px 10px rgba(185, 185, 185, 0.5));
+    margin: 10px;
 }
 
 .text {
-    font-size: 1rem;
     color: white;
     max-width: 600px;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-h1 {
+/*Home text*/
+.front-text {
+    font-size: 3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.back-text {
+    font-size: 3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.dev-text {
+    font-size: 3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.front-text,
+.back-text,
+.dev-text {
+    animation: floatUp 3s linear infinite;
+    position: relative;
     margin: 20px;
+}
+
+/* Different delays to make it look dynamic */
+.back-text {
+    animation-delay: 1s;
+}
+
+.dev-text {
+    animation-delay: 2s;
+}
+
+@keyframes floatUp {
+    0% {
+        top: 0;
+        opacity: 1;
+    }
+
+    100% {
+        top: -100px;
+        opacity: 0;
+    }
 }
 
 h2 {
@@ -153,7 +196,78 @@ h2 {
 
 }
 
+/* HandWave */
+.hand-wave {
+    display: inline-block;
+    animation: wave 2s infinite;
+    transform-origin: 70% 70%;
+    /* Make it look natural from wrist */
+}
 
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(14deg);
+    }
+
+    20% {
+        transform: rotate(-8deg);
+    }
+
+    30% {
+        transform: rotate(14deg);
+    }
+
+    40% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* fullname */
+.fullname {
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Name */
+
+.name {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.name::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #00bfff;
+    left: 0;
+    bottom: 0;
+    transition: width 0.4s ease;
+}
+
+.name:hover::after {
+    width: 100%;
+}
 
 /* darkmode */
 .container {
