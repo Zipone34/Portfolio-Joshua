@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    transition: background-color 0.3s;
+    background-color: #0d1224;
+}
+
+body.dark-mode {
+    background-color: #005881;
+    color: white;
+}
+
+#navbar {
+    background-color: rgb(0, 126, 158);
+    color: black;
+    padding: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+body.dark-mode #navbar {
+    background-color: #006888;
+    color: white;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: white;
+
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+/* ZP Picture */
+img {
+    width: 50px;
+
+}
+
+/*Main*/
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.young-image {
+    width: 100%;
+    filter: drop-shadow(4px 4px 10px rgba(185, 185, 185, 0.5));
+}
+
+.text {
+    font-size: 1rem;
+    color: white;
+    max-width: 600px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1 {
+    margin: 20px;
+}
+
+h2 {
+    margin: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        backdrop-filter: blur(10px);
+        /* glass blur effect */
+        -webkit-backdrop-filter: blur(10px);
+        /* Safari support */
+        text-align: center;
+        display: none;
+        z-index: 1000;
+
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 1rem 0;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #toggle-dark {
+        margin-bottom: 20px;
+    }
+
+
+}
+
+
+
+/* darkmode */
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+button {
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    transition: transform 0.3s;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background: hsl(0, 0%, 0%);
+    color: #ffffff;
+}
+
+#toggle-dark {
+
+    color: white;
+    border: none;
+    margin-top: -3px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Skills */
+
+.Front-Text {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.minus {
+    color: #ffffff;
+    font-size: 2rem;
+    width: 30px;
+    height: auto;
+
+}
+
+.space {
+    margin-top: 40px;
+}
+
+.Tech-Stack {
+    font-size: 3rem;
+    color: white;
+    text-align: left;
+    margin-top: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+.scroll-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 20px 0;
+}
+
+.scroll-track {
+    display: flex;
+    width: calc(250px * 10);
+    /* image width * (image count * 2) */
+    animation: scroll 20s linear infinite;
+}
+
+.box {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 150px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    /* Blur the background behind it */
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
+    box-shadow: 0 8px 32px rgba(70, 70, 70, 0.25);
+    /* Optional shadow */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.size {
+    width: 100px;
+    height: 100px;
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Make it responsive */
+@media (max-width: 600px) {
+    .box {
+        width: 150px;
+        height: 100px;
+    }
+
+    .size {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+.Front-End {
+    height: 100vh;
+}
+
+
+
+/* Tooltip text */
+.tooltip {
+    position: absolute;
+    bottom: 10px;
+    background-color: rgba(29, 29, 29, 0.75);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.box:hover .tooltip {
+    opacity: 1;
+}
+
+
+/* Button up */
+
+#scrollUpBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px 18px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#scrollUpBtn:hover {
+    background-color: #000000;
+    transform: scale(1.1);
+}
