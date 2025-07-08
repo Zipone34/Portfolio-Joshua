@@ -37,7 +37,14 @@ body.dark-mode #navbar {
     align-items: center;
     padding: 1rem 2rem;
     color: white;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
+    /* ✅ Semi-transparent background */
 }
 
 .logo {
@@ -51,6 +58,7 @@ body.dark-mode #navbar {
     gap: 1.5rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 600;
+
 
 }
 
@@ -129,7 +137,7 @@ body.dark-mode #navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    margin-top: 70px;
 }
 
 .young-image {
@@ -140,7 +148,7 @@ body.dark-mode #navbar {
 
 .text {
     color: white;
-    max-width: 600px;
+    max-width: 650px;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -179,6 +187,23 @@ body.dark-mode #navbar {
     animation-delay: 2s;
 }
 
+
+.github-icon {
+    position: absolute;
+    right: 10px;
+    top: 56.7%;
+    transform: translateY(-50%) scale(0);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    color: #000;
+    font-size: 30px;
+}
+
+.username:hover .github-icon {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+}
+
 @keyframes floatUp {
     0% {
         top: 0;
@@ -201,18 +226,21 @@ body.dark-mode #navbar {
 
     .nav-links {
         position: absolute;
-        top: 100px;
+        top: 88px;
         right: 0;
         width: 100%;
         flex-direction: column;
+        /* Semi-transparent for blur */
         backdrop-filter: blur(10px);
-        /* glass blur effect */
         -webkit-backdrop-filter: blur(10px);
-        /* Safari support */
         text-align: center;
-        display: none;
         z-index: 1000;
+        display: none;
+    }
 
+    .text {
+        margin-top: 90px;
+        max-width: 90%;
     }
 
     .nav-links.active {
@@ -232,11 +260,135 @@ body.dark-mode #navbar {
         margin-bottom: 20px;
     }
 
-    .Nickname,
-    .fullname {
-        font-size: 1.5rem;
+
+    .github-icon {
+        position: relative;
+        top: 30px;
+        font-size: 50px;
     }
 
+}
+
+
+/* From Uiverse.io by mrhyddenn */
+.button {
+    margin: 30px auto;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    color: #0f1923;
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all .15s ease;
+}
+
+.button::before,
+.button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: calc(50% - 5px);
+    border: 1px solid #7D8082;
+    transition: all .15s ease;
+}
+
+.button::before {
+    top: 0;
+    border-bottom-width: 0;
+}
+
+.button::after {
+    bottom: 0;
+    border-top-width: 0;
+}
+
+.button:active,
+.button:focus {
+    outline: none;
+}
+
+.button:active::before,
+.button:active::after {
+    right: 3px;
+    left: 3px;
+}
+
+.button:active::before {
+    top: 3px;
+}
+
+.button:active::after {
+    bottom: 3px;
+}
+
+.button_lg {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #0f1923;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.button_lg::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: #0f1923;
+}
+
+.button_lg::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 4px;
+    background-color: #0f1923;
+    transition: all .2s ease;
+}
+
+.button_sl {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: -8px;
+    width: 0;
+    background-color: #005864;
+    transform: skew(-15deg);
+    transition: all .2s ease;
+}
+
+.button_text {
+    position: relative;
+}
+
+.button:hover {
+    color: #0f1923;
+}
+
+.button:hover .button_sl {
+    width: calc(100% + 15px);
+}
+
+.button:hover .button_lg::after {
+    background-color: #fff;
 }
 
 /* HandWave */
@@ -283,11 +435,11 @@ body.dark-mode #navbar {
 
 /* fullname */
 .fullname {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: white;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin: 10px 0;
+    margin: 20px auto;
 }
 
 /*Nickname*/
