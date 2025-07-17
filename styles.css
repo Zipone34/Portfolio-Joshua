@@ -268,7 +268,7 @@ body.dark-mode #navbar {
 
 .github-icon {
     position: absolute;
-    right: 15px;
+    right: 20px;
     top: 45%;
     transform: translateY(-50%) scale(0);
     opacity: 0;
@@ -829,6 +829,90 @@ body.dark-mode {
         width: 30%;
     }
 }
+
+/* Team Section */
+.team-section {
+    height: 100vh;
+    padding-top: 150px;
+}
+
+.team-section .Team {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+}
+
+.team-container {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.team-member-image {
+    margin: 20px auto;
+    /* auto left/right centers block elements */
+    display: block;
+    /* ensures image is a block element */
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 150px;
+    transition: transform 0.3s ease;
+}
+
+.team-member-role {
+    font-size: 1rem;
+    color: #ccc;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    animation: fadeup 1s ease;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.team-member-role {
+    animation: fadeUp 1s ease;
+}
+
+
+.team-member-name {
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.team-member {
+    width: 300px;
+    height: 300px;
+    margin: 0 10px;
+    backdrop-filter: blur(10px);
+    /* Blur the background behind it */
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
+    box-shadow: 0 8px 32px rgba(70, 70, 70, 0.25);
+    /* Optional shadow */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 
 /*Contact*/
 .contact-section {
