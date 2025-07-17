@@ -153,6 +153,80 @@ body.dark-mode #navbar {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+
+
+.others-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* space between items */
+    flex-wrap: wrap;
+    /* wrap items on smaller screens */
+    margin: 20px 0;
+    text-align: center;
+
+}
+
+.others {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 100px;
+    text-align: left;
+    flex-direction: row;
+    /* side-by-side layout */
+
+}
+
+
+
+.others .numbers {
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+.others .experience {
+    font-size: 0.9rem;
+    color: #fff;
+    margin: 0;
+    line-height: 1.2;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+}
+
+/* Line */
+.Line {
+    flex-direction: column;
+    font-size: 10px;
+    margin: 15px;
+}
+
+
+
+/* Optional media query for extra responsiveness */
+@media (min-width: 600px) {
+    .others {
+        width: 45%;
+    }
+}
+
+@media (min-width: 900px) {
+    .others {
+        width: 30%;
+    }
+}
+
+
+
+
 /*Home text*/
 .front-text {
     font-size: 3rem;
@@ -191,7 +265,7 @@ body.dark-mode #navbar {
 .github-icon {
     position: absolute;
     right: 10px;
-    top: 56.7%;
+    top: 48%;
     transform: translateY(-50%) scale(0);
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -435,11 +509,18 @@ body.dark-mode #navbar {
 
 /* fullname */
 .fullname {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 20px auto;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px;
+    width: 70%;
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+
 }
 
 /*Nickname*/
@@ -665,4 +746,76 @@ body.dark-mode {
 #scrollUpBtn:hover {
     background-color: #000000;
     transform: scale(1.1);
+}
+
+.fas.fa-angle-up {
+    color: white;
+    font-size: 20px;
+}
+
+
+/*Projects*/
+.projects-section {
+    height: 100vh;
+}
+
+.projects-section .Projects {
+    padding-top: 150px;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 20px;
+
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-box {
+    width: 250px;
+    height: 150px;
+    margin: 0 10px;
+    backdrop-filter: blur(10px);
+    /* Blur the background behind it */
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
+    box-shadow: 0 8px 32px rgba(70, 70, 70, 0.25);
+    /* Optional shadow */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-box:hover {
+    transform: translateY(-5px);
+}
+
+.project-box .Project-title {
+    margin-bottom: 10px;
+    color: #007BFF;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.project-box .Description {
+    color: #555;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Responsive for larger screens */
+@media (min-width: 600px) {
+    .project-box {
+        width: 45%;
+    }
+}
+
+@media (min-width: 900px) {
+    .project-box {
+        width: 30%;
+    }
 }
