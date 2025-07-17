@@ -56,7 +56,7 @@ body.dark-mode #navbar {
     list-style: none;
     display: flex;
     gap: 1.5rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
 
 
@@ -69,7 +69,9 @@ body.dark-mode #navbar {
 }
 
 .nav-links a:hover {
-    color: #00bcd4;
+    cursor: pointer;
+    transform: scale(1.05);
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
 }
 
 .nav-links {
@@ -101,8 +103,10 @@ body.dark-mode #navbar {
     transform: translateY(-50%) translateX(-10px);
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    color: #007bff;
+    color: #00a2ff;
+
 }
+
 
 .nav-links a:hover::before {
     transform: translateY(-50%) translateX(0);
@@ -110,7 +114,7 @@ body.dark-mode #navbar {
 }
 
 .nav-links a:hover {
-    color: #007bff;
+    color: #00a2ff;
 }
 
 .hamburger {
@@ -150,7 +154,7 @@ body.dark-mode #navbar {
     color: white;
     max-width: 650px;
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -189,7 +193,7 @@ body.dark-mode #navbar {
     font-size: 1rem;
     color: #ffffff;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
 }
 
@@ -198,7 +202,7 @@ body.dark-mode #navbar {
     color: #fff;
     margin: 0;
     line-height: 1.2;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
 }
 
@@ -215,7 +219,9 @@ body.dark-mode #navbar {
 @media (min-width: 600px) {
     .others {
         width: 45%;
+
     }
+
 }
 
 @media (min-width: 900px) {
@@ -230,17 +236,20 @@ body.dark-mode #navbar {
 /*Home text*/
 .front-text {
     font-size: 3rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .back-text {
     font-size: 3rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .dev-text {
     font-size: 3rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 
@@ -451,6 +460,7 @@ body.dark-mode #navbar {
 
 .button_text {
     position: relative;
+    font-family: 'Roboto', sans-serif;
 }
 
 .button:hover {
@@ -512,7 +522,7 @@ body.dark-mode #navbar {
     font-size: 1.5rem;
     color: white;
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Roboto', sans-serif;
     margin: 20px auto;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -520,6 +530,7 @@ body.dark-mode #navbar {
     width: 70%;
     box-shadow: 0 8px 32px rgba(255, 255, 255, 0.25);
     border-radius: 10px;
+    font-weight: 600;
 
 }
 
@@ -528,7 +539,7 @@ body.dark-mode #navbar {
     font-size: 2.5rem;
     color: white;
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Name */
@@ -537,6 +548,7 @@ body.dark-mode #navbar {
     display: inline-block;
     position: relative;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
 }
 
 .name::after {
@@ -561,6 +573,7 @@ body.dark-mode #navbar {
     cursor: pointer;
     transform: scale(1.05);
     text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -606,7 +619,7 @@ body.dark-mode {
     color: white;
     text-align: center;
     margin-top: 50px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .minus {
@@ -626,7 +639,7 @@ body.dark-mode {
     color: white;
     text-align: left;
     margin-top: 50px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
 }
 
@@ -716,7 +729,7 @@ body.dark-mode {
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .box:hover .tooltip {
@@ -764,7 +777,7 @@ body.dark-mode {
     text-align: center;
     font-size: 3rem;
     color: white;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 20px;
 
 }
@@ -799,6 +812,7 @@ body.dark-mode {
     color: #007BFF;
     text-align: center;
     margin: 10px 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .project-box .Description {
@@ -817,5 +831,67 @@ body.dark-mode {
 @media (min-width: 900px) {
     .project-box {
         width: 30%;
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00bcd4;
+}
+
+.footer-links,
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a,
+.footer-socials a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover,
+.footer-socials a:hover {
+    color: #00bcd4;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-links,
+    .footer-socials {
+        flex-direction: column;
     }
 }
