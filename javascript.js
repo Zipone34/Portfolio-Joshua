@@ -48,3 +48,28 @@ scrollBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+
+
+const emojis = ['⚡', '⚡', '⚡', '⚡'];
+const container = document.getElementById('emoji-container');
+
+function spawnEmoji() {
+    const emoji = document.createElement('div');
+    emoji.classList.add('emoji');
+    emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+
+    // Random position
+    emoji.style.top = Math.random() * 100 + 'vh';
+    emoji.style.left = Math.random() * 100 + 'vw';
+
+    container.appendChild(emoji);
+
+    // Remove emoji after animation ends
+    setTimeout(() => {
+        emoji.remove();
+    }, 1500);
+}
+
+// Spawn every 300ms
+setInterval(spawnEmoji, 300);
+

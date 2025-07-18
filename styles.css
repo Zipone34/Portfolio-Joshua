@@ -529,6 +529,48 @@ body.dark-mode #navbar {
 
 }
 
+/*thunderstorm*/
+#emoji-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.emoji {
+    position: absolute;
+    font-size: 1rem;
+    opacity: 0;
+    animation: popup 1.5s ease-in-out forwards;
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+
+    40% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    70% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
+
 /*Nickname*/
 .Nickname {
     font-size: 2.5rem;
@@ -947,6 +989,7 @@ body.dark-mode {
     object-fit: cover;
     border-radius: 150px;
     transition: transform 0.3s ease;
+    border: 4px solid #00bcd4;
 }
 
 .team-member-role {
@@ -958,6 +1001,10 @@ body.dark-mode {
     font-weight: 800;
     animation: fadeup 1s ease;
 }
+
+
+
+
 
 @keyframes fadeUp {
     0% {
