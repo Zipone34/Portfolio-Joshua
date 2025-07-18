@@ -39,6 +39,7 @@
         </button>
         <ul class="nav-links" id="navLinks">
             <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#Front-End">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#team">Team</a></li>
@@ -101,7 +102,25 @@
             </button>
         </div>
     </div>
-
+    <!-- Add this after your main content, before the Team Section -->
+    <section class="about-section" id="about">
+        <h1 class="About-Title" data-aos="fade-up">- About Me -</h1>
+        <div class="about-container" data-aos="fade-up">
+            <img src="./images/115150262.jfif" alt="Joshua Y. Singuelas" class="about-img">
+            <div class="about-text">
+                <p class="about-description">
+                    I'm a passionate developer with experience in Front-End, Back-End, and UI/UX design. I love building
+                    creative and functional web applications, learning new technologies, and collaborating with others.
+                    My journey in coding started with curiosity and has grown into a commitment to excellence and
+                    innovation.
+                </p>
+                <p class="about-description-paragraph">
+                    When I'm not coding, I enjoy designing, prototyping, and exploring new ideas. Let's connect and
+                    create something amazing together!
+                </p>
+            </div>
+        </div>
+    </section>
     <!-- Section 1 -->
     <div class="Front-End" id="Front-End">
         <h1 class="Tech-Stack"> <span class="minus">-</span> My Tech Stack <span class="minus">-</span></h1>
@@ -251,29 +270,49 @@
         <div class="contact-section" id="contact-Me">
             <h1 class="Contact">- Contact Me -</h1>
             <p class="contact-info">You can reach me at</p>
-            <button id="scrollUpBtn" title="Scroll to top"><i class="fas fa-angle-up"></i></button>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <img src="./images/492137170_2053638081798222_3369785292590856570_n.jpg" alt="Phone Icon"
+                        class="contact-icon">
+                    <a href="#" class="contact-link">Joshua Yanson Singuelas</a>
+                    <p class="contact-Social-Media">Facebook <i class="fab fa-facebook-f"></i>
+                    </p>
+                </div>
+                <div class="contact-item">
+                    <img src="./images/391661577_1673039586524742_7050012544775881578_n.jpg" alt="Email Icon"
+                        class="contact-icon">
+                    <a href="#" class="contact-link">Zipone34 / Joshua</a>
+                    <p class="contact-Social-Media">Github <i class="fab fa-github"></i></p>
+                </div>
+                <div class="contact-item">
+                    <img src="./images/115150262.jfif" alt="Address Icon" class="contact-icon">
+                    <a href="#" class="contact-link">joshuastudentprogrammer</a>
+                    <p class="contact-Social-Media">Tiktok <i class="fab fa-tiktok"></i></p>
+                </div>
+                <button id="scrollUpBtn" title="Scroll to top"><i class="fas fa-angle-up"></i></button>
+            </div>
         </div>
         <footer>
             <div class="footer-container">
-                <div class="footer-logo">Zp/Zipone34</div>
+                <div class="footer-logo"><img src="images/ZP-removebg-preview.png" class="footer-img"></div>
 
                 <div class="footer-links">
                     <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Contact</a>
+                    <a href="#Front-End">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#team">Team</a>
+                    <a href="#contact-Me">Contact</a>
                 </div>
 
                 <div class="footer-socials">
                     <a href="#">Facebook</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">LinkedIn</a>
+                    <a href="#">Tiktok</a>
+                    <a href="#">Github</a>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                &copy; 2025 YourBrand. All rights reserved.
+                &copy; design & code by Joshua Y. Singuelas 2025. All rights reserved.
             </div>
             <script src="javascript.js">
             </script>
