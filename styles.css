@@ -897,7 +897,7 @@ body.dark-mode {
 /*Projects*/
 
 .projects-section {
-    height: 100vh;
+    height: 150vh;
 }
 
 .project-thumbnail {
@@ -961,8 +961,11 @@ body.dark-mode {
 
 /* Responsive for larger screens */
 @media (min-width: 600px) {
+
+
     .project-box {
         width: 45%;
+
     }
 }
 
@@ -970,12 +973,13 @@ body.dark-mode {
     .project-box {
         width: 30%;
     }
+
 }
 
 /* Team Section */
 .team-section {
     height: 100vh;
-    padding-top: 150px;
+    margin-top: 150px;
 }
 
 .team-section .Team {
