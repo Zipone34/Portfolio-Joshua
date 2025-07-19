@@ -348,6 +348,10 @@ body.dark-mode #navbar {
 }
 
 
+
+
+
+
 /* From Uiverse.io by mrhyddenn */
 .button {
     margin: 30px auto;
@@ -891,8 +895,19 @@ body.dark-mode {
 
 
 /*Projects*/
+
 .projects-section {
     height: 100vh;
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    padding: 10px;
+    border: 2px solid #007BFF;
 }
 
 .projects-section .Projects {
@@ -914,7 +929,7 @@ body.dark-mode {
 
 .project-box {
     width: 250px;
-    height: 150px;
+    height: 300px;
     margin: 0 10px;
     backdrop-filter: blur(10px);
     /* Blur the background behind it */
